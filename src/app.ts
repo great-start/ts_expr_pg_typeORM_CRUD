@@ -1,10 +1,10 @@
-import express, { Express, Request, Response } from 'express';
+import express, { Request, Response } from 'express';
 import { appDataSource } from './data-source';
 
 import { config } from './config';
 import { apiRouter } from './routes';
 
-const app: Express = express();
+const app: express.Application = express();
 
 app.use(express.static('pages'));
 app.use(apiRouter);
